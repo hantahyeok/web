@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kakao Map API</title>
+    </head>
+    <body>
+        
+        <!-- 카카오지도를 웹에서 보여주려면 카카오개발자사이트 참고하여 제작 -->
+        <!-- 카카오지도는 반드시 웹 호스팅 되어야 동작함. 즉, 서버에 업로드 후 접속해야 함. -->
+
+        <!-- 지도가 보여질 영역 요소 [사이즈설정이 없으면 지도 안보임] -->
+        <div id="map" style="width:500px;height:400px;"></div>
+
+        <!-- kakao 지도 라이브러리 적용 및 - [JavaScript 키] 등록-->
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b642af77699787bb6ff06a2ba8f2515d"></script>
+        
+        <!-- 실제 지도를보여주는 코드   -->
+        <script>
+            var container = document.getElementById('map');
+            var options = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667),
+                level: 3
+            };
+    
+            var map = new kakao.maps.Map(container, options);
+        </script>
+        
+    </body>
+</html>
